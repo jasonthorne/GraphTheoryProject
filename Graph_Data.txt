@@ -1,0 +1,94 @@
+Parties (10):
+
+CREATE (m:party {name:"party name"});
+
+Fianna Fáil
+Labour Party
+Independents 4 Change
+Fine Gael
+Sinn Féin
+Green Party
+Workers and Unemployed Action Group
+Independent
+Social Democrats
+Anti-Austerity Alliance
+
+----------------------------------------------
+
+Constituencies (40):
+
+CREATE (m:Constituency {name:"constituency name"});
+
+Carlow-Kilkenny
+Cork North-Central
+Donegal
+Dublin Fingal
+Dublin South-Central
+Galway East
+Kildare South
+Longford -Westmeath
+Meath West
+Tipperary
+Cavan-Monaghan
+Cork North-West
+Dublin Bay North
+Dublin Mid West
+Dublin South-West
+Galway West
+Laois
+Louth
+Offaly
+Waterford
+Clare
+Cork South-Central
+Dublin Bay South
+Dublin North-West
+Dublin West
+Kerry
+Limerick City
+Mayo
+Roscommon-Galway
+Wexford
+Cork East
+Cork South-West
+Dublin Central
+Dublin Rathdown
+Dún Laoghaire
+Kildare North
+Limerick County
+Meath East
+Sligo-Leitrim
+Wicklow
+
+
+----------------------------------------
+
+TDS (158)
+
+
+CREATE (m:TD {name:"td name", first_time_member:"yes/no", has_served_under_another_party:"yes/no"});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
