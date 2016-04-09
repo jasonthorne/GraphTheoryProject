@@ -69,7 +69,9 @@ TDS (158)
 CREATE (m:TD {name:"td name", first_time_member:"yes/no", has_served_under_another_party:"yes/no"});
 
 
-
+MATCH (constituency:Constituency {name:"Louth"}),
+(td:TD {name:"Mr. Gerry Adams"})
+MERGE (td)-[:REPRESENTS]->(constituency);
 
 
 
