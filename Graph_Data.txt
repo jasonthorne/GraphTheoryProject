@@ -2,7 +2,7 @@ Parties (10):
 
 CREATE (m:party {name:"party name"});
 
-Fianna Fáil
+Fianna Fáil +++++
 Labour Party
 Independents 4 Change
 Fine Gael
@@ -26,7 +26,7 @@ Dublin Fingal
 Dublin South-Central
 Galway East
 Kildare South
-Longford -Westmeath
+Longford-Westmeath
 Meath West
 Tipperary
 Cavan-Monaghan
@@ -69,11 +69,12 @@ TDS (158)
 CREATE (m:TD {name:"td name", first_time_member:"yes/no", has_served_under_another_party:"yes/no"});
 
 
-MATCH (constituency:Constituency {name:"Louth"}),
-(td:TD {name:"Mr. Gerry Adams"})
-MERGE (td)-[:REPRESENTS]->(constituency);
-
-
+MATCH (td:TD {name:"td name"}),
+      (constituency:Constituency {name:"constituency name"}),
+      (party:Party {name:"party name"})
+      
+      MERGE (td)-[:MEMBER_OF]->(party) 
+      MERGE (td)-[:REPRESENTS]->(constituency);
 
 
 
