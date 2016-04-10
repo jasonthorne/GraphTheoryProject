@@ -1,7 +1,8 @@
-//This query retrieves all TDs who have been elected as first time members to the Dail. 
+//This query retrieves all TDs who have previously served in the Dail as members of another party.
 
 
 MATCH (td:TD)
-WHERE td.first_time_member = "Yes"
-RETURN td;
+WHERE td.has_served_under_another_party = "Yes"
+RETURN td; 
+
 
