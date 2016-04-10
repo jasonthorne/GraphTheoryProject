@@ -1,9 +1,7 @@
-// Describe your query
-// at the start
-// in comments.
+//This query retrieves all TDs who have been elected as first time members to the Dail. 
 
 
-MATCH
-	(n)
-RETURN
-	n;
+MATCH (td:TD)
+WHERE td.first_time_member = "Yes"
+RETURN td;
+
