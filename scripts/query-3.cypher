@@ -1,9 +1,7 @@
-// Describe your query
-// at the start
-// in comments.
+// This query retrieves all male TD members.
 
 
-MATCH
-	(n)
-RETURN
-	n;
+
+MATCH (td:TD)
+WHERE td.name =~ ".*Mr.*"
+RETURN td;
