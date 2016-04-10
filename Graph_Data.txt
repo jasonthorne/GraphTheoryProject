@@ -3,21 +3,24 @@ Parties (10):
 CREATE (m:party {name:"party name"});
 
 Fianna Fáil +++++
-Labour Party
-Independents 4 Change
-Fine Gael
-Sinn Féin
-Green Party
-Workers and Unemployed Action Group
-Independent
-Social Democrats
-Anti-Austerity Alliance
+Labour Party +++++
+Independents 4 Change +++++
+Fine Gael +++++
+Sinn Féin +++++
+Green Party +++++
+Workers and Unemployed Action Group +++++
+Independent +++++
+Social Democrats +++++
+Independent +++++
+Anti-Austerity Alliance +++++
 
+Ceann Comhairle +++++
 ----------------------------------------------
 
 Constituencies (40):
 
 CREATE (m:Constituency {name:"constituency name"});
+
 
 Carlow-Kilkenny
 Cork North-Central
@@ -66,12 +69,12 @@ Wicklow
 TDS (158)
 
 
-CREATE (m:TD {name:"td name", first_time_member:"yes/no", has_served_under_another_party:"yes/no"});
+CREATE (td:TD {name:"[td's name]", first_time_member:"[yes/no]", has_served_under_another_party:"[yes/no]"});
 
 
-MATCH (td:TD {name:"td name"}),
-      (constituency:Constituency {name:"constituency name"}),
-      (party:Party {name:"party name"})
+MATCH (td:TD {name:"[td's name]"}),
+      (constituency:Constituency {name:"[constituency name]"}),
+      (party:Party {name:"[party name]"})
       
       MERGE (td)-[:MEMBER_OF]->(party) 
       MERGE (td)-[:REPRESENTS]->(constituency);
