@@ -74,7 +74,7 @@ My three queries are as follows:
 
 * Find first time members
 * Served under  another party
-* Constituencies with multiple part wins
+* Find male TDs
 
 #### Find first time members
 
@@ -96,16 +96,16 @@ WHERE td.has_served_under_another_party = "Yes"
 RETURN td; 
 ```
 
-#### Constituencies with multiple part wins
+#### Find male TDs
 
-This query retrieves all Constituencies, with multiple candidates from the same party having won seats.
+This query retrieves all male TD members.
 
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH (td:TD)
+WHERE td.name =~ ".*Mr.*"
+RETURN td;
 ```
+
 
 ## References
 
