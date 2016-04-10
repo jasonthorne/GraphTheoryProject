@@ -33,8 +33,9 @@ These nodes were created as follows:
 
 ```cypher
 CREATE (party:Party {name:"[party name});
-A directional relationship was then created for each TD labeled node, to point at one of these party labeled nodes, in relation to which party they were a member of.  This relationship type has been given a name of ‘MEMBER_OF’.
 ```
+
+A directional relationship was then created for each TD labeled node, to point at one of these party labeled nodes, in relation to which party they were a member of.  This relationship type has been given a name of ‘MEMBER_OF’.
 
 These relationships were created as follows:
 
